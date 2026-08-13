@@ -48,10 +48,10 @@ O sistema conta com 4 páginas principais acessadas através do menu de navegaç
 > 🔗 **Link do Figma:** [Clique aqui para acessar o protótipo no Figma](https://www.figma.com) *(Substitua pelo seu link do Figma)*
 
 ### Layouts das Telas
-![Wireframe / Protótipo - Sobre Mim](./src/assets/prototipo-sobre-mim.png)
+![Wireframe / Protótipo - Sobre Mim](docs/PaginaSobreMim.png)
 ![Wireframe / Protótipo - Projetos](./src/assets/prototipo-projetos.png)
-![Wireframe / Protótipo - Experiências](./src/assets/prototipo-experiencias.png)
-![Wireframe / Protótipo - Contato](./src/assets/prototipo-contato.png)
+![Wireframe / Protótipo - Experiências](docs/PaginaExperiencia.png)
+![Wireframe / Protótipo - Contato](docs/PaginaContato.png)
 
 ---
 
