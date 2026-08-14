@@ -1,18 +1,24 @@
-import { Routes, Route } from 'react-router-dom';
+import { createBrowserRouter, Outlet } from 'react-router-dom';
+import Navbar from './components/layout/Navbar';
+import AboutMe from './pages/AboutMe';
+import Projects from './pages/Projects';
+import ProjectDetails from './pages/ProjectsDetails';
+import Experience from './pages/Experience';
+import Contacts from './pages/Contacts';
+import AppLayout from './components/layout/AppLayout';
 
-// Importação das páginas
-import Home from './pages/Home';             // 1. Sobre Mim
-import Projects from './pages/Projects';     // 2. Projetos
-import Experience from './pages/Experience'; // 3. Experiências
-import Contact from './pages/Contact';       // 4. Contato
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <AppLayout />,
+    children: [
+      { index: true, element: <AboutMe /> },
+      { path: 'projetos', element: <Projects /> },
+      { path: 'projetos/:projectName', element: <ProjectDetails /> },
+      { path: 'experiencias', element: <Experience /> },
+      { path: 'contato', element: <Contacts /> },
+    ],
+  },
+]);
 
-export function AppRoutes() {
-  return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/projetos" element={<Projects />} />
-      <Route path="/experiencias" element={<Experience />} />
-      <Route path="/contato" element={<Contact />} />
-    </Routes>
-  );
-}
+export default router;

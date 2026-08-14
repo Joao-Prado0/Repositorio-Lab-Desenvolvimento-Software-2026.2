@@ -1,0 +1,21 @@
+.navbar-container{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    background-color: #1B1B1B;
+    padding: 30px 360px;
+    gap: 200px;
+}
+
+.navbar-navitems {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-social-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
