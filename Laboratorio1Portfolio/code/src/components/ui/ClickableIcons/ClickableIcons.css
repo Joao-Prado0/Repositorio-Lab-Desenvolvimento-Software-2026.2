@@ -3,7 +3,7 @@
     border: none;
     cursor: pointer;
     color: #9C9C9C;
-    transition: ease 0.5s;
+    transition: ease 0.3s;
 }
 
 .clickable-icon:hover {

@@ -1,0 +1,53 @@
+.aboutme-container {
+    display: flex;
+    flex-direction: row;
+    column-gap: 150px;
+    padding: 20px 260px;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.aboutme-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutme-text h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.aboutme-text h2 {
+    font-size: 40px;
+}
+
+.aboutme-text p {
+    color: #9C9C9C;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 18px;
+
+}
+
+.profile-pic {
+    max-width: 500px;
+    border-radius: 100%;
+}
+
+.aboutme-text button {
+    margin-top: auto; 
+    align-self: flex-start; 
+    min-width: 240px;
+}
+
+.cursor {
+    display: inline-block;
+    color: #4CAF50; 
+    animation: blink 1s step-end infinite;
+    font-weight: bold;
+    margin-left: 2px;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
