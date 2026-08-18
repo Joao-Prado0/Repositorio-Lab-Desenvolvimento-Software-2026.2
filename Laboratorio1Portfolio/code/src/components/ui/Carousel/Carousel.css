@@ -1,0 +1,87 @@
+.carousel-wrapper {
+    position: relative;
+    max-width: 800px; 
+    margin: 0 auto;
+}
+
+.embla__viewport {
+    overflow: hidden;
+    width: 100%;
+}
+
+.embla__container {
+    display: flex;
+    flex-direction: row; 
+    gap: 20px; 
+}
+
+.embla__slide {
+    flex: 0 0 100%; 
+    min-width: 0;
+    position: relative;
+    
+    /* Novas propriedades para limitar o tamanho */
+    height: 500px; /* Define o limite máximo de altura do carrossel */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #121212; /* Fundo escuro para fotos que não preenchem tudo */
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Nova regra: Controla o comportamento de qualquer imagem dentro do carrossel */
+.embla__slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Força a imagem a preencher todo o espaço, cortando o excesso */
+    object-position: center; /* Centraliza o corte para focar no meio da imagem */
+}
+
+.carousel-controls {
+    /* Posiciona os botões de forma absoluta em relação ao carousel-wrapper */
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-50%); /* Centraliza verticalmente de forma exata */
+    
+    /* Estica a div invisível para fora da imagem para posicionar os botões nas laterais */
+    left: -60px; 
+    right: -60px; 
+    
+    display: flex;
+    justify-content: space-between; /* Joga um botão para a extrema esquerda e outro para a direita */
+    pointer-events: none; /* Garante que essa div invisível não bloqueie o arraste (swipe) do carrossel */
+}
+
+.carousel-button {
+    pointer-events: auto; /* Reativa os cliques apenas nos botões */
+    
+    /* Essas 4 linhas resolvem o problema do botão oval: */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0; 
+    
+    flex-shrink: 0; /* Impede que a tela os esmague se diminuir o tamanho */
+    box-sizing: border-box; /* Trava o tamanho exato de 40x40 */
+    
+    background-color: #121212; /* Fundo escuro para contrastar caso passe por cima da foto */
+    border: 1px solid #4CAF50;
+    color: #4CAF50;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.carousel-button:hover {
+    background-color: #4CAF50;
+    color: #121212; 
+}
+
+.carousel-button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}

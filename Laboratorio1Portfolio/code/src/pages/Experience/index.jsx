@@ -1,10 +1,17 @@
+import CardExperience from "../../components/layout/CardExperience"
+import { experienceInformation } from "../../data/experience"
 import "./Experience.css"
 
 const Experience = () => {
     return (
-        <h1>
-            Fala Tu
-        </h1>
+        <div className="experience-container">
+            <h1>Experiências</h1>
+            <div className="container-cards-experience">
+                {experienceInformation.map((experienceObj) => (
+                    <CardExperience key={experienceObj.slug} obj={experienceObj} />
+                ))}
+            </div>
+        </div>
     )
 }
 

@@ -1,0 +1,14 @@
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 260px;
+    gap: 60px;
+}
+
+.container-cards-experience {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px; /* Adicionado para separar as duas colunas do wireframe */
+    width: 100%; /* Garante que o grid ocupe todo o espaço disponível do container */
+}

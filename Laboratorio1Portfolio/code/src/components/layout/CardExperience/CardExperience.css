@@ -1,0 +1,22 @@
+.card-experience {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha todo o conteúdo do card à esquerda */
+    width: 100%; /* O card ocupará todo o espaço que o grid permitir */
+    gap: 12px; /* Espaço uniforme entre a imagem, o título e o botão */
+}
+
+.card-experience img {
+    width: 100%; /* A imagem agora é determinada pelo tamanho da div pai */
+    height: auto; 
+    aspect-ratio: 16 / 9; /* Mantém a proporção retangular idêntica em todas as fotos */
+    object-fit: cover; /* Corta os excessos da foto sem esmagar ou esticar a imagem */
+    border-radius: 8px; /* Cantos arredondados iguais ao wireframe */
+}
+
+.card-experience h2 {
+    font-size: 24px;
+    margin: 0;
+    margin-top: 8px;
+    color: #ffffff;
+}

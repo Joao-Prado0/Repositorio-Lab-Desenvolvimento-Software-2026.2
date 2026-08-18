@@ -6,6 +6,7 @@ import ProjectDetails from './pages/ProjectsDetails';
 import Experience from './pages/Experience';
 import Contacts from './pages/Contacts';
 import AppLayout from './components/layout/AppLayout';
+import ExperienceDetails from './pages/ExperienceDetails';
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
       { path: 'projetos', element: <Projects /> },
       { path: 'projetos/:projectName', element: <ProjectDetails /> },
       { path: 'experiencias', element: <Experience /> },
+      { path: 'experiencias/:experienceName', element: <ExperienceDetails />},
       { path: 'contato', element: <Contacts /> },
     ],
   },

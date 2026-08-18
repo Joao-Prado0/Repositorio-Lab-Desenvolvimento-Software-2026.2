@@ -27,7 +27,7 @@ const AboutMe = () => {
                 </button>
             </div>
             <div>
-                <img src=".\src\assets\ProfilePic1.jpg" className="profile-pic" />
+                <img src="\img\ProfilePics\ProfilePic1.jpg" className="profile-pic" />
             </div>
         </div>
     );
