@@ -16,13 +16,15 @@ Este projeto consiste em um website de portfólio pessoal interativo com o objet
 
 ## 📄 Seções da Aplicação
 
-O sistema conta com 4 páginas principais acessadas por meio do menu de navegação:
+O sistema conta com 5 páginas principais acessadas por meio do menu de navegação:
 
 1. Sobre Mim (`/`): breve apresentação em português e inglês, destacando formação, áreas de atuação (Engenharia de Software e Desenvolvimento), interesses e objetivos profissionais.
 2. Projetos (`/projetos`): linha do tempo dinâmica dos projetos desenvolvidos, contendo nome, descrição, tecnologias utilizadas, link para repositório do GitHub e mídia interativa (imagens/GIFs).
-3. Detalhes Projetos(`/projetos\{nomeProjeto}`): páginas individuais de cada projeto que apresentam mais informações e detalhes sobre eles, além de uma exibição por meio de fotos, vídeos ou giphys
+3. Detalhes Projetos (`/projetos/:projectName`): páginas individuais de cada projeto que apresentam mais informações e detalhes sobre eles, além de uma exibição por meio de fotos, vídeos ou GIFs.
 4. Experiências (`/experiencias`): espaço estruturado para relatar experiências profissionais, estágios, trabalhos freelance e participações em eventos técnicos.
 5. Contato (`/contato`): página com ícones sociais clicáveis (e-mail, LinkedIn, GitHub e WhatsApp) e formulário interativo de mensagem com funcionalidade de envio direto por e-mail.
+
+O layout principal é composto por um cabeçalho de navegação persistente e uma área de conteúdo que exibe cada página conforme a rota acessada.
 
 ---
 
@@ -37,7 +39,9 @@ O sistema conta com 4 páginas principais acessadas por meio do menu de navegaç
 ### Dependências & Bibliotecas
 
 - react-router-dom: gerenciamento de rotas e navegação client-side SPA.
-- lucide-react: conjunto de ícones para componentes e botões de contato.
+- react-icons: conjunto de ícones utilizado na navegação e nos links para redes sociais.
+- embla-carousel-react: biblioteca utilizada para a implementação de carrosséis.
+- framer-motion: biblioteca utilizada para animações e transições da interface.
 
 ### Ferramentas de Design & Versionamento
 
@@ -49,7 +53,7 @@ O sistema conta com 4 páginas principais acessadas por meio do menu de navegaç
 
 ## 🎨 Protótipos (Wireframes & UI Design)
 
-> 🔗 Link do Figma: [Clique aqui para acessar o protótipo no Figma](https://www.figma.com) *(substitua pelo seu link do Figma)*
+> 🔗 Link do Figma: [Clique aqui para acessar o protótipo no Figma](https://www.figma.com/design/e4Malif4A6em6Vo9LXrWvZ/Wireframes-portfolio?node-id=0-1&p=f&t=2WqPyH8JPjOn1BNB-0)
 
 ### Layouts das Telas
 
@@ -68,29 +72,25 @@ O sistema conta com 4 páginas principais acessadas por meio do menu de navegaç
 ## 📁 Estrutura de Diretórios do Projeto
 
 ```text
-portfolio/
-├── public/
-│   └── favicon.ico
-├── src/
-│   ├── assets/               # Imagens, GIFs e logotipos
-│   ├── components/           # Componentes reutilizáveis (Navbar, Footer, Cards, etc.)
-│   │   ├── Navbar.jsx
-│   │   └── Footer.jsx
-│   ├── pages/                # Páginas da aplicação
-│   │   ├── Home.jsx          # Página Sobre Mim (PT/EN)
-│   │   ├── Projects.jsx      # Página de Projetos (Timeline)
-│   │   ├── Experience.jsx    # Página de Experiências
-│   │   └── Contact.jsx       # Página de Contato + Formulário
-│   ├── App.jsx               # Componente raiz com layout base
-│   ├── main.jsx              # Ponto de entrada do React
-│   ├── routes.jsx            # Configuração centralizada de rotas
-│   └── index.css             # Estilos globais e resets CSS
-├── .gitignore
-├── eslint.config.js
-├── index.html
-├── package.json
-├── README.md
-└── vite.config.js
+Laboratorio1Portfolio/
+├── code/
+│   ├── public/img/            # Imagens públicas do portfólio
+│   ├── src/
+│   │   ├── assets/            # Recursos utilizados pela aplicação
+│   │   ├── components/
+│   │   │   ├── layout/        # Layout principal, navbar e cards
+│   │   │   └── ui/            # Componentes visuais reutilizáveis
+│   │   ├── data/experience.js # Dados das experiências
+│   │   ├── pages/              # Páginas e telas da aplicação
+│   │   ├── index.css           # Estilos globais
+│   │   ├── main.jsx            # Ponto de entrada do React
+│   │   └── routes.jsx          # Configuração centralizada de rotas
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── package.json
+│   └── vite.config.js
+├── docs/                      # Imagens dos wireframes
+└── README.md
 ```
 
 ---
@@ -107,13 +107,14 @@ portfolio/
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/SEU_USUARIO/NOME_DO_REPOSITORIO.git
+git clone https://github.com/Joao-Prado0/Repositorio-Lab-Desenvolvimento-Software-2026.2.git
 ```
 
 2. Acesse a pasta do projeto:
 
 ```bash
-cd NOME_DO_REPOSITORIO
+cd Laboratorio1Portfolio
+cd code
 ```
 
 3. Instale as dependências:
@@ -134,8 +135,7 @@ npm run dev
 
 ## 🌐 Hospedagem na Nuvem
 
-- Link de acesso (produção): https://seu-portfolio.vercel.app
-- Status: em breve / a ser atualizado na Sprint 03
+- Status: aplicação em desenvolvimento local; publicação em produção será definida posteriormente.
 
 ---
 
